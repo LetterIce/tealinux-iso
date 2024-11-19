@@ -1,0 +1,33 @@
+# This is an example PKGBUILD file. Use this as a start to creating your own,
+# and remove these comments. For more information, see 'man PKGBUILD'.
+# NOTE: Please fill out the license field for your package! If it is unknown,
+# then please put 'unknown'.
+
+# Maintainer: Gagah Syuja <gghssa1@gmail.com>
+packager="Gagah Syuja <gghssa1@gmail.com>"
+pkgname=tealinux-installer-bin
+pkgver=0.1.0
+pkgrel=1
+pkgdesc="TealinuxOS Installer, written in Tauri|Rust|SvelteKit."
+arch=("x86_64")
+url="https://github.com/tealinuxos/tealinux-installer"
+license=('GPL')
+depends=("webkit2gtk")
+makedepends=("cargo")
+# source=("tealinux-installer_${pkgver}_amd64.deb")
+source=("$pkgname::git+https://github.com/tealinuxos/tealinux-installer.git")
+sha256sums=('a64c1bcd97aeab7eb2e8667dc03885ffb1732583d030ee94d306aa6d36614fe4')
+
+build() {
+    cd "$pkgname"
+    bun install
+    bun tauri build
+    install "src-tauri/target/release/bundle/deb/tealinux-installer_${pkgver}_amd64.deb" "$srcdir/tealinux-installer_${pkgver}_amd64.deb"
+    cd "$srcdir"
+    ar x tealinux-installer_${pkgver}_amd64.deb
+}
+
+package() {
+    cd "$srcdir"
+    bsdtar -xf "data.tar.gz" -C "$pkgdir"
+}
