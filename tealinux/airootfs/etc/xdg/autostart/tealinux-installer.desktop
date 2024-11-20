@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Tealinux Installer
 Categories=Development
-Exec=sudo env WAYLAND_DISPLAY="/run/user/1000/wayland-1" XDG_RUNTIME_DIR="/run/user/0" /bin/tealinux-installer
+Exec=sh -c "sudo env WAYLAND_DISPLAY=$XDG_RUNTIME_DIR/$WAYLAND_DISPLAY XDG_RUNTIME_DIR=/run/user/0 /bin/tealinux-installer"
 Icon=tealinux-installer
 Terminal=false
 Type=Application
