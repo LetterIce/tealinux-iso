@@ -48,8 +48,10 @@ sof-firmware
 firefox
 
 # desktop environment
-cosmic
-cosmic-icon-theme
+# cosmic
+# cosmic-icon-theme
+plasma
+kde-applications
 power-profiles-daemon
 
 # shell
