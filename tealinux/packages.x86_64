@@ -48,11 +48,29 @@ sof-firmware
 firefox
 
 # desktop environment
-# cosmic
-# cosmic-icon-theme
-plasma
-kde-applications
-power-profiles-daemon
+plasma-desktop # Minimal set up plasma desktop 
+konsole # Terminal
+dolphin # File Manager
+kdeconnect # Nice to have one 
+ark # Archiver
+ffmpegthumbs # ffmpeg based thumbnailer
+kdegraphics-thumbnailers # Another thumbnailers
+filelight # Disk usage analyzer
+gwenview # Image viewer
+isoimagewriter # Hybrid iso to usb
+kamoso # Camera app
+kdenetwork-filesharing
+krfb # Desktop sharing
+kompare # Diff-ing file 
+kcalc # Calculator
+okular # Document viewer 
+spectacle # Screenshot
+partitionmanager # Gparted friend in qt
+ktorrent # Torrent ooo
+ 
+kate # Like a notepad
+
+power-profiles-daemon # power profiling
 
 # shell
 #zsh
