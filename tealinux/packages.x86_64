@@ -141,6 +141,9 @@ kate
 # App/theme store
 discover
 
+# Noto Nerd Fonts. Noto Mania!!!
+ttf-noto-nerd
+
 # power profiling
 power-profiles-daemon
 
