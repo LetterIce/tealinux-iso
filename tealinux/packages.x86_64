@@ -138,6 +138,9 @@ ktorrent
 # Like a notepad
 kate
 
+# App/theme store
+discover
+
 # power profiling
 power-profiles-daemon
 
