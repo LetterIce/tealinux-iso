@@ -34,9 +34,6 @@ networkmanager
 
 # editor
 neovim
-vim
-vi
-nano
 
 # audio
 pipewire
@@ -47,31 +44,6 @@ sof-firmware
 # browser
 firefox
 
-# desktop environment
-plasma-desktop # Minimal set up plasma desktop 
-konsole # Terminal
-dolphin # File Manager
-kdeconnect # Nice to have one 
-ark # Archiver
-ffmpegthumbs # ffmpeg based thumbnailer
-kdegraphics-thumbnailers # Another thumbnailers
-filelight # Disk usage analyzer
-gwenview # Image viewer
-isoimagewriter # Hybrid iso to usb
-kamoso # Camera app
-kdenetwork-filesharing
-krfb # Desktop sharing
-kompare # Diff-ing file 
-kcalc # Calculator
-okular # Document viewer 
-spectacle # Screenshot
-partitionmanager # Gparted friend in qt
-ktorrent # Torrent ooo
- 
-kate # Like a notepad
-
-power-profiles-daemon # power profiling
-
 # shell
 #zsh
 fish
@@ -81,6 +53,7 @@ starship
 vulkan-intel
 
 # gparted
+gparted
 dosfstools
 jfsutils
 f2fs-tools
@@ -88,6 +61,7 @@ btrfs-progs
 exfatprogs
 ntfs-3g
 reiserfsprogs
+dosfstools
 udftools
 xfsprogs
 nilfs-utils
@@ -97,11 +71,73 @@ xorg-xhost
 
 # other
 reflector
-sudo
 xdg-user-dirs
 eza
 git
-ntfs-3g
 fastfetch
-gparted
 htop
+
+# desktop environment
+# Minimal set up plasma desktop
+plasma-desktop
+sddm
+
+# Terminal 
+konsole
+
+# File Manager
+dolphin
+
+# Nice to have one
+kdeconnect
+
+# Archive
+ark
+
+# ffmpeg based thumbnailer
+ffmpegthumbs
+
+# Another thumbnailers
+kdegraphics-thumbnailers
+
+# Disk usage analyzer
+filelight
+
+# Image viewer
+gwenview
+
+# Hybrid iso to usb
+isoimagewriter
+
+# Camera app
+kamoso
+
+kdenetwork-filesharing
+
+# Desktop sharing
+krfb
+
+# Diff-ing file 
+kompare
+
+# Calculator
+kcalc
+
+# Document viewer 
+okular
+
+# Screenshot
+spectacle
+
+# Gparted friend in qt
+# partitionmanager
+
+# Torrent ooo
+ktorrent
+
+# Like a notepad
+kate
+
+# power profiling
+power-profiles-daemon
+
