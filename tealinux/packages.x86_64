@@ -85,3 +85,7 @@ ntfs-3g
 fastfetch
 gparted
 htop
+
+# font
+noto-fonts-cjk
+noto-fonts-emoji 
