@@ -53,9 +53,9 @@ cosmic-icon-theme
 power-profiles-daemon
 
 # shell
-#zsh
-fish
-starship
+zsh
+#fish
+#starship
 
 # intel
 vulkan-intel
@@ -85,6 +85,8 @@ ntfs-3g
 fastfetch
 gparted
 htop
+udisk2
+gvfs
 
 # font
 noto-fonts-cjk
