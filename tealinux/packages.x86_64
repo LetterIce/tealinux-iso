@@ -85,6 +85,10 @@ ntfs-3g
 fastfetch
 gparted
 htop
+udisk2
+gvfs
+gvfs-mtp
+android-udev
 
 # font
 noto-fonts-cjk
