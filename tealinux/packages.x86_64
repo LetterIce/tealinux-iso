@@ -92,4 +92,5 @@ android-udev
 
 # font
 noto-fonts-cjk
-noto-fonts-emoji 
+noto-fonts-emoji
+ttf-jetbrains-mono-nerd 
