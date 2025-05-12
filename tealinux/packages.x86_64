@@ -67,7 +67,7 @@ f2fs-tools
 btrfs-progs
 exfatprogs
 ntfs-3g
-reiserfsprogs
+#reiserfsprogs
 udftools
 xfsprogs
 nilfs-utils
@@ -85,7 +85,7 @@ ntfs-3g
 fastfetch
 gparted
 htop
-udisk2
+udisks2
 gvfs
 gvfs-mtp
 android-udev
@@ -93,4 +93,4 @@ android-udev
 # font
 noto-fonts-cjk
 noto-fonts-emoji
-ttf-jetbrains-mono-nerd 
+ttf-nerd-fonts-symbols
