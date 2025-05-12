@@ -1,5 +1,5 @@
 function fish_greeting
-    fastfetch
+    fastfetch -c ~/.config/fastfetch/config2.jsonc
 end
 
 function fish_command_not_found

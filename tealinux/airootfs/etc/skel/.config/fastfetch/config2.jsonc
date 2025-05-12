@@ -29,6 +29,8 @@
         },
         "os",
         "kernel",
+        "de",
+        "shell",
         "disk",
         "memory",
         "packages",
