@@ -6,17 +6,32 @@
 # Maintainer: Gagah Syuja <gghssa1@gmail.com>
 packager="Gagah Syuja <gghssa1@gmail.com>"
 pkgname=tealinux-installer-git
-pkgver=0.1.0
+pkgver=2.0
 pkgrel=1
 pkgdesc="TealinuxOS Installer, written in Tauri|Rust|SvelteKit."
 arch=("x86_64")
-url="https://github.com/tealinuxos/tealinux-installer"
+url="https://github.com/tealinuxos/tealinux-installer.git"
 license=('GPL')
-depends=("webkit2gtk")
+depends=("webkit2gtk-4.1")
 makedepends=("cargo")
-source=("tealinux-installer_${pkgver}_amd64.deb")
-sha256sums=('a64c1bcd97aeab7eb2e8667dc03885ffb1732583d030ee94d306aa6d36614fe4')
+source=(
+    "git+${url}"
+    "${pkgname}.desktop"
+)
+sha256sums=(
+    'SKIP'
+    '57ecffa5b991947fa4eb575d7ffd7ee7f9e3c870065c0878c99747a0e41311c6'
+)
+
+build() {
+    cd "${srcdir}/tealinux-installer"
+    bun install
+    bun run tauri build --no-bundle
+}
 
 package() {
-    bsdtar -xf "$srcdir/data.tar.gz" -C "$pkgdir"
+    install -Dm755 "${srcdir}/tealinux-installer/src-tauri/target/release/tealinux-installer" "${pkgdir}/usr/bin/tealinux-installer"
+
+    install -D -m644 ${pkgname}.desktop ${pkgdir}/usr/share/applications/${pkgname}.desktop
+    install -D -m644 ${pkgname}.desktop ${pkgdir}/etc/xdg/autostart/${pkgname}.desktop
 }
