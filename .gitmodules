@@ -1,3 +1,6 @@
 [submodule "tealinux/grub/lorem-loader"]
 	path = tealinux/grub/lorem-loader
 	url = https://github.com/tealinuxos/lorem-loader.git
+[submodule "tealinux/airootfs/usr/share/grub/themes/lorem-loader"]
+	path = tealinux/airootfs/usr/share/grub/themes/lorem-loader
+	url = https://github.com/tealinuxos/lorem-loader.git
