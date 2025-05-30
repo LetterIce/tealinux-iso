@@ -1,0 +1,3 @@
+[submodule "tealinux/grub/lorem-loader"]
+	path = tealinux/grub/lorem-loader
+	url = https://github.com/tealinuxos/lorem-loader.git
