@@ -34,6 +34,9 @@ networkmanager
 
 # editor
 neovim
+vim
+vi
+nano
 
 # audio
 pipewire
@@ -60,8 +63,7 @@ f2fs-tools
 btrfs-progs
 exfatprogs
 ntfs-3g
-reiserfsprogs
-dosfstools
+#reiserfsprogs
 udftools
 xfsprogs
 nilfs-utils
@@ -71,11 +73,21 @@ xorg-xhost
 
 # other
 reflector
+sudo
 xdg-user-dirs
 eza
 git
 fastfetch
 htop
+udisks2
+gvfs
+gvfs-mtp
+android-udev
+
+# font
+noto-fonts-cjk
+noto-fonts-emoji
+#ttf-nerd-fonts-symbols
 
 # desktop environment
 # Minimal set up plasma desktop
