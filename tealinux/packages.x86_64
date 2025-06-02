@@ -159,3 +159,15 @@ ttf-noto-nerd
 # power profiling
 power-profiles-daemon
 
+# applet kde
+plasma-nm
+plasma-pa
+klipper
+plasma-workspace
+bluedevil 
+plasma-vault 
+print-manager 
+kscreen
+
+# bluetooth
+bluez
