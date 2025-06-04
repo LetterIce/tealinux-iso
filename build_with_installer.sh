@@ -3,7 +3,7 @@ sudo sed -i "s|Server = file://.*|Server = file://$(pwd)/localrepo/|" ./tealinux
 
 # Build and add installer to localrepo
 cd ./localrepo
-makepkg -f
+makepkg -fs
 repo-add localrepo.db.tar.xz tealinux-installer-git-2.0-1-x86_64.pkg.tar.zst
 cd ..
 
