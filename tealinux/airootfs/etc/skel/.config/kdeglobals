@@ -111,7 +111,7 @@ ForegroundVisited=61,111,171
 
 [General]
 AccentColor=68,189,128
-ColorScheme=Leaf-Dark
+ColorScheme=Tea-dark
 ColorSchemeHash=8ff746803925568ed7447d085749472923e32b81
 LastUsedCustomAccentColor=68,189,128
 
@@ -119,7 +119,7 @@ LastUsedCustomAccentColor=68,189,128
 Theme=Tela-circle
 
 [KDE]
-LookAndFeelPackage=org.kde.breezedark.desktop
+LookAndFeelPackage=org.kde.teadark.desktop
 
 [KFileDialog Settings]
 Allow Expansion=false
