@@ -13,7 +13,7 @@ arch=("x86_64")
 url="https://github.com/tealinuxos/tealinux-installer.git"
 license=('GPL')
 depends=("webkit2gtk-4.1")
-makedepends=("grub rust")
+makedepends=("grub", "rust")
 source=(
     "git+${url}"
     "${pkgname}.desktop"
