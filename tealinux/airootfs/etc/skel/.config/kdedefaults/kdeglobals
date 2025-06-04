@@ -1,8 +1,11 @@
 [General]
-ColorScheme=BreezeDark
+ColorScheme=Leaf-Dark
 
 [Icons]
 Theme=Tela-circle
 
 [KDE]
 widgetStyle=Breeze
+
+[Desktop Entry]
+Wallpaper=file:///usr/share/backgrounds/tea-dark.png

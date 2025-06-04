@@ -1,11 +1,9 @@
 [ColorEffects:Disabled]
-ChangeSelectionColor=
 Color=56,56,56
 ColorAmount=0
 ColorEffect=0
 ContrastAmount=0.6000000000000001
 ContrastEffect=1
-Enable=
 IntensityAmount=0.1
 IntensityEffect=2
 
@@ -21,13 +19,13 @@ IntensityAmount=0
 IntensityEffect=2
 
 [Colors:Button]
-BackgroundAlternate=61,145,103
+BackgroundAlternate=41,40,42
 BackgroundNormal=46,44,47
-DecorationFocus=68,189,128
-DecorationHover=68,189,128
-ForegroundActive=68,189,128
+DecorationFocus=114,155,121
+DecorationHover=114,155,121
+ForegroundActive=136,192,208
 ForegroundInactive=166,172,186
-ForegroundLink=68,189,128
+ForegroundLink=0,149,179
 ForegroundNegative=218,68,83
 ForegroundNeutral=74,198,255
 ForegroundNormal=236,239,244
@@ -37,44 +35,40 @@ ForegroundVisited=82,148,226
 [Colors:Complementary]
 BackgroundAlternate=41,40,42
 BackgroundNormal=46,44,47
-DecorationFocus=68,189,128
-DecorationHover=68,189,128
-ForegroundActive=68,189,128
+DecorationFocus=0,170,127
+DecorationHover=0,170,127
+ForegroundActive=136,192,208
 ForegroundInactive=166,172,186
-ForegroundLink=68,189,128
+ForegroundLink=0,149,179
 ForegroundNegative=218,68,83
 ForegroundNeutral=255,255,127
 ForegroundPositive=0,170,127
 
 [Colors:Header]
 BackgroundAlternate=41,40,42
-DecorationFocus=68,189,128
-DecorationHover=68,189,128
-ForegroundActive=68,189,128
-ForegroundLink=68,189,128
 
 [Colors:Selection]
-BackgroundAlternate=61,145,103
-BackgroundNormal=61,145,103
-DecorationFocus=68,189,128
-DecorationHover=68,189,128
-ForegroundActive=68,189,128
-ForegroundInactive=0,0,0
-ForegroundLink=88,244,165
+BackgroundAlternate=98,134,104
+BackgroundNormal=114,155,121
+DecorationFocus=114,155,121
+DecorationHover=114,155,121
+ForegroundActive=252,252,252
+ForegroundInactive=211,218,227
+ForegroundLink=0,149,179
 ForegroundNegative=218,68,83
 ForegroundNeutral=74,198,255
-ForegroundNormal=0,0,0
+ForegroundNormal=225,228,220
 ForegroundPositive=114,155,121
 ForegroundVisited=189,195,199
 
 [Colors:Tooltip]
 BackgroundAlternate=41,40,42
 BackgroundNormal=46,44,47
-DecorationFocus=68,189,128
-DecorationHover=68,189,128
-ForegroundActive=68,189,128
+DecorationFocus=114,155,121
+DecorationHover=114,155,121
+ForegroundActive=136,192,208
 ForegroundInactive=166,172,186
-ForegroundLink=68,189,128
+ForegroundLink=0,149,179
 ForegroundNegative=218,68,83
 ForegroundNeutral=74,198,255
 ForegroundNormal=225,228,220
@@ -84,11 +78,11 @@ ForegroundVisited=82,148,226
 [Colors:View]
 BackgroundAlternate=41,40,42
 BackgroundNormal=46,44,47
-DecorationFocus=68,189,128
-DecorationHover=68,189,128
-ForegroundActive=68,189,128
+DecorationFocus=114,155,121
+DecorationHover=114,155,121
+ForegroundActive=0,140,165
 ForegroundInactive=166,172,186
-ForegroundLink=68,189,128
+ForegroundLink=0,149,179
 ForegroundNegative=218,68,83
 ForegroundNeutral=74,198,255
 ForegroundNormal=225,228,220
@@ -98,11 +92,11 @@ ForegroundVisited=124,183,255
 [Colors:Window]
 BackgroundAlternate=41,40,42
 BackgroundNormal=46,44,47
-DecorationFocus=68,189,128
-DecorationHover=68,189,128
-ForegroundActive=68,189,128
+DecorationFocus=114,155,121
+DecorationHover=114,155,121
+ForegroundActive=136,192,208
 ForegroundInactive=166,172,186
-ForegroundLink=68,189,128
+ForegroundLink=0,149,179
 ForegroundNegative=218,68,83
 ForegroundNeutral=74,198,255
 ForegroundNormal=225,228,220
@@ -110,36 +104,12 @@ ForegroundPositive=114,155,121
 ForegroundVisited=61,111,171
 
 [General]
-AccentColor=68,189,128
 ColorScheme=Leaf-Dark
-ColorSchemeHash=8ff746803925568ed7447d085749472923e32b81
-LastUsedCustomAccentColor=68,189,128
-
-[Icons]
-Theme=Tela-circle
+Name=Leaf-Dark
+shadeSortColumn=true
 
 [KDE]
-LookAndFeelPackage=org.kde.breezedark.desktop
-
-[KFileDialog Settings]
-Allow Expansion=false
-Automatically select filename extension=true
-Breadcrumb Navigation=true
-Decoration position=2
-LocationCombo Completionmode=5
-PathCombo Completionmode=5
-Show Bookmarks=false
-Show Full Path=false
-Show Inline Previews=true
-Show Preview=false
-Show Speedbar=true
-Show hidden files=false
-Sort by=Name
-Sort directories first=true
-Sort hidden files last=false
-Sort reversed=false
-Speedbar Width=140
-View Style=DetailTree
+contrast=2
 
 [WM]
 activeBackground=46,44,47
@@ -148,6 +118,3 @@ activeForeground=225,228,220
 inactiveBackground=46,44,47
 inactiveBlend=46,44,47
 inactiveForeground=166,172,186
-
-[Desktop Entry]
-Wallpaper=file:///usr/share/backgrounds/tea-dark.png
