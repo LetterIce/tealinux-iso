@@ -91,9 +91,12 @@ Buttons.writeEntry("ButtonsOnRight", "")
 Buttons.writeEntry("ButtonsOnLeft", "XIA")
 
 // === Accent Color Configuration ===
+// const colorScheme = ConfigFile("kdeglobals")
+// colorScheme.group = "General"
+// colorScheme.writeEntry("ColorScheme", "Tea-dark")
 const colorScheme = ConfigFile("kdeglobals")
 colorScheme.group = "General"
-colorScheme.writeEntry("ColorScheme", "Tea-dark")
+colorScheme.writeEntry("AccentColorFromWallpaper", "true")
 
 // === Splash Screen Configuration ===
 const splash = ConfigFile("ksplashrc")
