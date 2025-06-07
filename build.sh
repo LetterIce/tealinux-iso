@@ -1,4 +1,4 @@
 #!/bin/bash
+sudo sed -i "s|Server = file://.*|Server = file://$(pwd)/localrepo/|" ./tealinux/pacman.conf
 sudo rm -rf .work
-sudo rm -rf out-baseline
 sudo mkarchiso -r -v -w .work -o out tealinux
