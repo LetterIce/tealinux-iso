@@ -111,3 +111,6 @@ snapshot
 
 # bluetooth
 bluez
+
+# AUR helper
+paru
