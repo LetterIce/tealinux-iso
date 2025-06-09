@@ -26,7 +26,7 @@ sha256sums=(
 build() {
     cd "${srcdir}/tealinux-installer"
     bun install
-    bun run tauri build --no-bundle
+    TEALINUX_BUILD=prod bun run tauri build --no-bundle
 }
 
 package() {
