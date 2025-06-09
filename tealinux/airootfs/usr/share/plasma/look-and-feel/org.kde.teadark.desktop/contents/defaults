@@ -12,6 +12,9 @@ Theme=Tela-circle
 [plasmarc][Theme]
 name=Breeze
 
+[konsolerc][Desktop Entry]
+DefaultProfile=Tea-dark.profile
+
 [kcminputrc][Mouse]
 cursorTheme=breeze_cursors
 
