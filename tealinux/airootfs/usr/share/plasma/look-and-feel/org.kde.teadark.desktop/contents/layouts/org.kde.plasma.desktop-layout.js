@@ -87,7 +87,7 @@ PlacesPanel.writeEntry('IconSize', 16)
 // === Window Decoration Buttons Configuration ===
 const Buttons = ConfigFile("kwinrc")
 Buttons.group = "org.kde.kdecoration2"
-Buttons.writeEntry("ButtonsOnRight", "XIA")
+Buttons.writeEntry("ButtonsOnRight", "IAX")
 Buttons.writeEntry("ButtonsOnLeft", "")
 
 // === Accent Color Configuration ===
