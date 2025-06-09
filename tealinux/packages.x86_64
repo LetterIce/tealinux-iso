@@ -92,20 +92,5 @@ noto-fonts-cjk
 noto-fonts-emoji
 ttf-nerd-fonts-symbols
 
-# Image viewer
-loupe
-
-# Video viewer
-totem
-
-# Document viewer 
-evince
-
-# Camera app
-snapshot
-
-# bluetooth
-bluez
-
 # AUR helper
 paru
