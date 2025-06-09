@@ -48,6 +48,12 @@ sof-firmware
 # browser
 firefox
 
+# desktop environment
+cosmic
+cosmic-icon-theme
+power-profiles-daemon
+xdg-utils
+
 # shell
 #zsh
 fish
@@ -109,9 +115,3 @@ bluez
 
 # AUR helper
 paru
-
-# desktop environment
-cosmic
-cosmic-icon-theme
-power-profiles-daemon
-xdg-utils
