@@ -168,3 +168,6 @@ kscreen
 
 # bluetooth
 bluez
+
+# Aur helper
+paru
