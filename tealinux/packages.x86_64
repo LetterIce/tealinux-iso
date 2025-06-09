@@ -27,7 +27,8 @@ efibootmgr
 amd-ucode
 intel-ucode
 parted
-os-prober
+os-prober-btrfs
+webkit2gtk-4.1
 
 # network
 networkmanager
