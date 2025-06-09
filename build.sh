@@ -1,9 +1,12 @@
 #!/bin/bash
 sudo sed -i "s|Server = file://.*|Server = file://$(pwd)/localrepo/|" ./tealinux/pacman.conf
-sudo rm -rf .work
 
 start_time=$(date +%s)
+
+# Build ISO
+sudo rm -rf .work
 time sudo systemd-inhibit mkarchiso -r -v -w .work -o out tealinux
+
 end_time=$(date +%s)
 elapsed_time=$((end_time - start_time))
 
