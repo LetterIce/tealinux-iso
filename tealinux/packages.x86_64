@@ -109,3 +109,9 @@ bluez
 
 # AUR helper
 paru
+
+# desktop environment
+cosmic
+cosmic-icon-theme
+power-profiles-daemon
+xdg-utils
