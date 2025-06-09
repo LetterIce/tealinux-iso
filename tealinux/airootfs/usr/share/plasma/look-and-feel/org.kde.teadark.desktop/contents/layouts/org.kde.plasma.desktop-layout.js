@@ -99,7 +99,7 @@ colorScheme.writeEntry("ColorScheme", "Tea-dark")
 // === Konsole Profile Configuration ===
 const konsoleProfile = ConfigFile("konsolerc")
 konsoleProfile.group = "Desktop Entry"
-konsoleProfile.writeEntry("DefaultProfile", "TeaLight.profile")
+konsoleProfile.writeEntry("DefaultProfile", "Tea-dark.profile")
 
 // === Splash Screen Configuration ===
 const splash = ConfigFile("ksplashrc")

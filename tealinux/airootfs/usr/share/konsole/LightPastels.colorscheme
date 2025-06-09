@@ -32,7 +32,7 @@ Color=74,165,113
 Color=180,226,200
 
 [Color2Intense]
-Color=0,170,127
+Color=74,165,113
 
 [Color3]
 Color=255,255,127
@@ -86,7 +86,7 @@ Color=46,44,47
 Color=166,172,186
 
 [ForegroundIntense]
-Color=0,140,165
+Color=0,113,99
 
 [General]
 Anchor=0.5,0.5
