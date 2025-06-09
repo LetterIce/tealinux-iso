@@ -6,13 +6,11 @@ ColorScheme=Tea-dark
 IconTheme=Tela-circle
 
 [kdeglobals][Icons]
+ColorScheme=Tea-dark
 Theme=Tela-circle
 
 [plasmarc][Theme]
 name=Breeze
-
-[plasmarc][Wallpapers]
-usersWallpapers=/usr/share/backgrounds/tea-dark.png
 
 [kcminputrc][Mouse]
 cursorTheme=breeze_cursors

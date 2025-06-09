@@ -91,12 +91,10 @@ Buttons.writeEntry("ButtonsOnRight", "XIA")
 Buttons.writeEntry("ButtonsOnLeft", "")
 
 // === Accent Color Configuration ===
-// const colorScheme = ConfigFile("kdeglobals")
-// colorScheme.group = "General"
-// colorScheme.writeEntry("ColorScheme", "Tea-light")
 const colorScheme = ConfigFile("kdeglobals")
 colorScheme.group = "General"
-colorScheme.writeEntry("AccentColorFromWallpaper", "true")
+colorScheme.writeEntry("ColorScheme", "Tea-light")
+// colorScheme.writeEntry("AccentColorFromWallpaper", "true")
 
 // === Splash Screen Configuration ===
 const splash = ConfigFile("ksplashrc")
@@ -109,5 +107,5 @@ for (var i = 0; i < allDesktops.length; i++) {
     var d = allDesktops[i];
     d.wallpaperPlugin = "org.kde.image";
     d.currentConfigGroup = ["Wallpaper", "org.kde.image", "General"];
-    d.writeConfig("Image", "file:///usr/share/plasma/look-and-feel/org.kde.teadark.desktop/contents/splash/images/background.png");
+    d.writeConfig("Image", "file:///usr/share/backgrounds/tea-light.png");
 }
