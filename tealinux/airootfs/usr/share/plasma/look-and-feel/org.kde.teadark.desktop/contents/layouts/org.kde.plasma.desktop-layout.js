@@ -96,6 +96,11 @@ colorScheme.group = "General"
 colorScheme.writeEntry("ColorScheme", "Tea-dark")
 // colorScheme.writeEntry("AccentColorFromWallpaper", "true")
 
+// === Konsole Profile Configuration ===
+const konsoleProfile = ConfigFile("konsolerc")
+konsoleProfile.group = "Desktop Entry"
+konsoleProfile.writeEntry("DefaultProfile", "TeaLight.profile")
+
 // === Splash Screen Configuration ===
 const splash = ConfigFile("ksplashrc")
 splash.group = "KSplash"
