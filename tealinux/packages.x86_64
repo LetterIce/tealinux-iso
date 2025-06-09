@@ -63,6 +63,7 @@ starship
 vulkan-intel
 
 # gparted
+gparted
 dosfstools
 jfsutils
 f2fs-tools
