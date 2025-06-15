@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # shellcheck disable=SC2034
 
-iso_edition="base"
-# iso_edition="cosmic"
+# iso_edition="base"
+iso_edition="cosmic"
 # iso_edition="plasma"
 iso_name="tealinux-celia-${iso_edition}"
 iso_label="TEALINUX-CELIA_$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%Y.%m)"
