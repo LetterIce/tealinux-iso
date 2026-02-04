@@ -1,79 +1,116 @@
-// === Top Panel Configuration ===
-paneltop = new Panel
-paneltop.hiding = "none"
-paneltop.location = "top"
-paneltop.floating = 1
-paneltop.height = 32
-paneltop.lengthMode = "fill"
-
-const width = screenGeometry(paneltop.screen).width
-
-function separators(a){
-    let c;
-    if (width <= 1280){
-        c = 1
-    } else if (width <= 1440){
-        c = 2
-    } else {
-        c = 3
-    }
-    for (let b = 0; b < c; b++)
-        a.addWidget("org.kde.plasma.marginsseparator")
+var allPanels = panels();
+for (var i = 0; i < allPanels.length; i++) {
+    allPanels[i].remove();
 }
 
-function separatorsTray(){
-    let c;
-    if (width <= 1280){
-        c = 2
-    } else if (width <= 1440){
-        c = 4
-    } else {
-        c = 6
-    }
-    return c
+// =========================================================
+// 1. WALLPAPER
+// =========================================================
+var allDesktops = desktops();
+for (var i = 0; i < allDesktops.length; i++) {
+    var d = allDesktops[i];
+    d.wallpaperPlugin = "org.kde.image";
+    d.currentConfigGroup = ["Wallpaper", "org.kde.image", "General"];
+    d.writeConfig("Image", "file:///usr/share/backgrounds/tea-light.png");
 }
 
-// Add widgets to the top panel
-separators(paneltop)
-paneltop.addWidget("org.kde.plasma.kickoff")
-paneltop.addWidget("org.kde.plasma.appmenu")
-paneltop.addWidget("org.kde.plasma.panelspacer")
+// =========================================================
+// 2. TOP BAR
+// =========================================================
+var panelTop = new Panel();
+panelTop.location = "top";
+panelTop.height = 32;
+panelTop.floating = true;
+panelTop.lengthMode = "fill";
+panelTop.hiding = "none";
 
-let systraprev = paneltop.addWidget("org.kde.plasma.systemtray")
-let SystrayContainmentId = systraprev.readConfig("SystrayContainmentId")
-const systray = desktopById(SystrayContainmentId)
-systray.currentConfigGroup = ["General"]
-systray.writeConfig("iconSpacing", "6")
+// -- Left Spacer --
+var paddingLeft = panelTop.addWidget("org.kde.plasma.panelspacer");
+paddingLeft.currentConfigGroup = ["General"];
+paddingLeft.writeConfig("expanding", "false");
+paddingLeft.writeConfig("length", "12");
 
-paneltop.addWidget("org.kde.plasma.marginsseparator")
+// -- Kickoff & Global Menu --
+panelTop.addWidget("org.kde.plasma.kickoff");
+panelTop.addWidget("org.kde.plasma.marginsseparator");
+panelTop.addWidget("org.kde.plasma.appmenu");
 
-let clock = paneltop.addWidget("org.kde.plasma.digitalclock")
-clock.currentConfigGroup = ["Appearance"]
-clock.writeConfig("customDateFormat", "ddd d MMM")
-clock.writeConfig("dateFormat", "custom")
-clock.writeConfig("showDate", "false")
-clock.writeConfig("dateDisplayFormat", "BesideTime")
-clock.writeConfig("fontStyleName", "bold")
-clock.writeConfig("autoFontAndSize", "false")
-clock.writeConfig("boldText", "true")
-clock.writeConfig("fontWeight", 700)
-clock.writeConfig("use24hFormat", "0")
+// -- Middle Spacer --
+panelTop.addWidget("org.kde.plasma.panelspacer");
 
-separators(paneltop)
+// -- System Tray --
+var systray = panelTop.addWidget("org.kde.plasma.systemtray");
+try {
+    systray.currentConfigGroup = ["General"];
+    systray.writeConfig("iconSpacing", "6");
+    systray.reloadConfig();
+} catch (e) {
+    print("Tray config skipped");
+}
 
-// === Bottom Panel Configuration ===
-panelbottom = new Panel
-panelbottom.location = "bottom"
-panelbottom.height = 56
-panelbottom.offset = 0
-panelbottom.floating = 1
-panelbottom.alignment = "center"
-panelbottom.hiding = "dodgewindows"
-panelbottom.lengthMode = "fit"
+panelTop.addWidget("org.kde.plasma.marginsseparator");
 
-panelbottom.addWidget("org.kde.plasma.marginsseparator")
-panelbottom.addWidget("org.kde.plasma.icontasks")
-panelbottom.addWidget("org.kde.plasma.marginsseparator")
+// -- Digital Clock --
+var clock = panelTop.addWidget("org.kde.plasma.digitalclock");
+clock.currentConfigGroup = ["Appearance"];
+clock.writeConfig("showDate", "false");
+clock.writeConfig("showSeconds", "false");
+clock.writeConfig("boldText", "true");
+clock.writeConfig("fontStyleName", "Bold");
+clock.writeConfig("fontWeight", "700");
+clock.writeConfig("autoFontAndSize", "false");
+clock.writeConfig("fontSize", "11");
+clock.writeConfig("dateFormat", "custom");
+
+// -- Right Spacer --
+var paddingRight = panelTop.addWidget("org.kde.plasma.panelspacer");
+paddingRight.currentConfigGroup = ["General"];
+paddingRight.writeConfig("expanding", "false");
+paddingRight.writeConfig("length", "12");
+
+
+// =========================================================
+// 3. BOTTOM DOCK
+// =========================================================
+var panelBottom = new Panel();
+panelBottom.location = "bottom";
+panelBottom.alignment = "center";
+panelBottom.height = 60;
+panelBottom.floating = true;
+panelBottom.lengthMode = "fit";
+panelBottom.hiding = "dodgewindows";
+
+// -- Dock Padding Left --
+var dockPaddingLeft = panelBottom.addWidget("org.kde.plasma.panelspacer");
+dockPaddingLeft.currentConfigGroup = ["General"];
+dockPaddingLeft.writeConfig("expanding", "false");
+dockPaddingLeft.writeConfig("length", "8");
+
+// -- Task Manager (Icons Only) --
+var tasks = panelBottom.addWidget("org.kde.plasma.icontasks");
+tasks.currentConfigGroup = ["General"];
+tasks.writeConfig("launchers", "applications:org.kde.dolphin.desktop,applications:firefox.desktop,applications:org.kde.konsole.desktop,applications:systemsettings.desktop");
+tasks.writeConfig("indicateAudioStreams", "true");
+tasks.writeConfig("showOnlyCurrentScreen", "true");
+tasks.writeConfig("middleClickAction", "NewInstance");
+tasks.writeConfig("wheelEnabled", "true");
+
+// -- Dock Padding Right --
+var dockPaddingRight = panelBottom.addWidget("org.kde.plasma.panelspacer");
+dockPaddingRight.currentConfigGroup = ["General"];
+dockPaddingRight.writeConfig("expanding", "false");
+dockPaddingRight.writeConfig("length", "8");
+
+
+// =========================================================
+// 4. ADDITIONAL CONFIGURATIONS
+// =========================================================
+
+// --- Splash Screen ---
+var ksplashrc = ConfigFile("ksplashrc");
+ksplashrc.group = "KSplash";
+ksplashrc.writeEntry("Theme", "org.kde.tealight.desktop");
+ksplashrc.writeEntry("Engine", "KSplashQML");
 
 // === Dolphin Configuration ===
 const IconsStatic_dolphin = ConfigFile('dolphinrc')
@@ -101,16 +138,11 @@ const konsoleProfile = ConfigFile("konsolerc")
 konsoleProfile.group = "Desktop Entry"
 konsoleProfile.writeEntry("DefaultProfile", "Tea-light.profile")
 
-// === Splash Screen Configuration ===
-const splash = ConfigFile("ksplashrc")
-splash.group = "KSplash"
-splash.writeEntry("Theme", "Kde.Splash.Dinamic")
-
-// === Set Wallpaper ===
-var allDesktops = desktops();
-for (var i = 0; i < allDesktops.length; i++) {
-    var d = allDesktops[i];
-    d.wallpaperPlugin = "org.kde.image";
-    d.currentConfigGroup = ["Wallpaper", "org.kde.image", "General"];
-    d.writeConfig("Image", "file:///usr/share/backgrounds/tea-light.png");
-}
+// --- KWin Window Decoration ---
+// Define window button layout (Menu on left, Actions on right)
+var kwinrc = ConfigFile("kwinrc");
+kwinrc.group = "org.kde.kdecoration2";
+kwinrc.writeEntry("ButtonsOnLeft", "M");
+kwinrc.writeEntry("ButtonsOnRight", "FIAX");
+kwinrc.group = "Windows";
+kwinrc.writeEntry("BorderlessMaximizedWindows", "true");
