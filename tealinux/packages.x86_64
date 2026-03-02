@@ -84,6 +84,11 @@ udisks2
 gvfs
 gvfs-mtp
 android-udev
+kde-material-you-colors
+darkly
+klassy
+kwin-effects-better-blur-dx
+plasma6-applets-panel-colorizer
 
 # font
 noto-fonts-cjk
