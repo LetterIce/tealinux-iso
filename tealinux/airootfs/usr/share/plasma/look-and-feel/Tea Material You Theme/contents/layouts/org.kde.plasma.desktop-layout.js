@@ -23,7 +23,7 @@ var layout = {
                 },
                 "/Wallpaper/org.kde.image/General": {
                     "Image": "file:///usr/share/backgrounds/tea-light.png",
-                    "SlidePaths": "/home/juan/.local/share/wallpapers/,/usr/share/wallpapers/"
+                    "SlidePaths": "/usr/share/wallpapers/"
                 }
             },
             "wallpaperPlugin": "org.kde.image"
