@@ -53,8 +53,10 @@ firefox
 fish
 starship
 
-# intel
+# universal graphics stack
+mesa
 vulkan-intel
+vulkan-radeon
 
 # gparted
 gparted
