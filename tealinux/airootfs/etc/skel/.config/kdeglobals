@@ -1,5 +1,8 @@
+[KDE]
+LookAndFeelPackage=org.tealinuxos.teadark
+
 [General]
-ColorScheme=MaterialYouLight
+ColorScheme=TeaDark
 
 [Icons]
 Theme=Reversal-green
